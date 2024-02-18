@@ -5,6 +5,9 @@ template-cli is a template project to build a cli with Go.
 Clone it with:
 
 ```bash
+# install gonew
+go install golang.org/x/tools/cmd/gonew@latest
+# use gonew to create your project based on this template
 gonew github.com/sgaunet/template-cli gitplatform.com/username/awesome_new_project
 cd awesome_new_project
 git init
