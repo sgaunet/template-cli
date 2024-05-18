@@ -23,6 +23,8 @@ repos:
     #     args: [rules/rules.go] # required 
     
   - repo: https://github.com/sgaunet/pre-commit
-    rev: v0.1.0
+    rev: v0.2.0
     hooks:
-    -   id: osv-scanner
+    - id: osv-scanner
+    - id: govulncheck
+    - id: gitleaks
