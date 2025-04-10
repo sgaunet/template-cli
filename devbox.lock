@@ -96,6 +96,54 @@
           "store_path": "/nix/store/834gvbmhpwvy1d65r5x4xihkxm4g91ab-golangci-lint-2.0.0"
         }
       }
+    },
+    "goreleaser@2.8.1": {
+      "last_modified": "2025-03-21T08:42:37Z",
+      "resolved": "github:NixOS/nixpkgs/bfa9810ff7104a17555ab68ebdeafb6705f129b1#goreleaser",
+      "source": "devbox-search",
+      "version": "2.8.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/v7qnqs17cdszl6mkw39mpk8ww0b70gbw-goreleaser-2.8.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/v7qnqs17cdszl6mkw39mpk8ww0b70gbw-goreleaser-2.8.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6z2mvd1b1g9nqnw0fsdcq786ik99888b-goreleaser-2.8.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/6z2mvd1b1g9nqnw0fsdcq786ik99888b-goreleaser-2.8.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/nz3y3dyv5n1jrbirbxp578jambyl53wm-goreleaser-2.8.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/nz3y3dyv5n1jrbirbxp578jambyl53wm-goreleaser-2.8.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xbcigyqhs33mzg1hqy8i8chj7v5v2x2z-goreleaser-2.8.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/xbcigyqhs33mzg1hqy8i8chj7v5v2x2z-goreleaser-2.8.1"
+        }
+      }
     }
   }
 }
