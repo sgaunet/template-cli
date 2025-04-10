@@ -1,0 +1,27 @@
+name: linters
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  linters:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install devbox
+        uses: jetify-com/devbox-install-action@v0.12.0
+        with:
+          enable-cache: true
+          devbox-version: 0.13.4
+
+      - name: Install prerequisites
+        shell: /usr/bin/bash {0}
+        run: |
+          devbox install
+          devbox run linters

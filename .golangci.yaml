@@ -1,0 +1,12 @@
+---
+version: "2"
+linters:
+  default: all
+
+  disable:
+    - wsl
+    - nlreturn
+    - depguard
+    - gochecknoinits
+    - gochecknoglobals
+    - forbidigo
