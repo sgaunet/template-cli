@@ -5,7 +5,7 @@ on:
   push:
 
 jobs:
-  goreleaser-snapshot:
+  linters:
     runs-on: ubuntu-latest
     steps:
       -
