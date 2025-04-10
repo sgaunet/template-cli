@@ -11,6 +11,12 @@
     "scripts": {
       "linters": [
         "task linters"
+      ],
+      "snapshot": [
+        "task snapshot"
+      ],
+      "release": [
+        "task release"
       ]
     }
   }
