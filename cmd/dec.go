@@ -1,3 +1,10 @@
+// Package cmd is a command-line interface (CLI) for encrypting
+// and decrypting files using AES encryption. It provides
+// commands to set and get the version of the CLI,
+// as well as to encrypt and decrypt files.
+// The CLI uses the aes package for encryption and decryption operations.
+// The code includes error handling for file operations and
+// command-line argument parsing using the cobra library.
 package cmd
 
 import (
@@ -8,12 +15,12 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// setCmd represents the set command
-var decCmd = &cobra.Command{
+// setCmd represents the set command.
+var decCmd = &cobra.Command{ //nolint:exhaustruct
 	Use:   "dec",
 	Short: "decrypt file in AES 128/256/512",
 	Long:  `decrypt file in AES 128/256/512`,
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(cmd *cobra.Command, _ []string) {
 		var (
 			tmpFile               *os.File
 			overwriteOriginalFile bool
@@ -39,7 +46,7 @@ var decCmd = &cobra.Command{
 				os.Exit(1)
 			}
 			outputFile = tmpFile.Name()
-			tmpFile.Close()
+			_ = tmpFile.Close()
 		}
 
 		if isFileExists(outputFile) && !overwriteOriginalFile {

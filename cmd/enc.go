@@ -8,12 +8,12 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// setCmd represents the set command
-var encCmd = &cobra.Command{
+// setCmd represents the set command.
+var encCmd = &cobra.Command{ //nolint:exhaustruct
 	Use:   "enc",
 	Short: "encrypt file in AES 128/256/512",
 	Long:  `encrypt file in AES 128/256/512`,
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(cmd *cobra.Command, _ []string) {
 		var (
 			tmpFile               *os.File
 			overwriteOriginalFile bool
@@ -39,7 +39,7 @@ var encCmd = &cobra.Command{
 				os.Exit(1)
 			}
 			outputFile = tmpFile.Name()
-			tmpFile.Close()
+			_ = tmpFile.Close()
 		}
 
 		if isFileExists(outputFile) && !overwriteOriginalFile {

@@ -10,8 +10,8 @@ var inputFile, outputFile string
 var keyFile string
 var rmOption bool
 
-// rootCmd represents the base command when called without any subcommands
-var rootCmd = &cobra.Command{
+// rootCmd represents the base command when called without any subcommands.
+var rootCmd = &cobra.Command{ //nolint:exhaustruct
 	Use:   "gocrypt",
 	Short: "Tool to encrypt/decrypt file in AES128/256/512.",
 	Long:  `Tool to encrypt/decrypt file in AES128/256/512.`,
@@ -20,6 +20,8 @@ var rootCmd = &cobra.Command{
 	// Run: func(cmd *cobra.Command, args []string) { },
 }
 
+// Execute adds all child commands to the root command and sets flags appropriately.
+// This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
 	err := rootCmd.Execute()
 	if err != nil {

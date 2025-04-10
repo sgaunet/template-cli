@@ -2,19 +2,20 @@ package cmd
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/spf13/cobra"
 )
 
-var version string = "development"
+var version = "development"
 
-// versionCmd represents the version command
-var versionCmd = &cobra.Command{
+// versionCmd represents the version command.
+var versionCmd = &cobra.Command{ //nolint:exhaustruct
 	Use:   "version",
 	Short: "print version of gocrypt",
 	Long:  `print version of gocrypt`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(version)
+	Run: func(_ *cobra.Command, _ []string) {
+		_, _ = fmt.Fprintf(os.Stdout, "%s\n", version)
 	},
 }
 

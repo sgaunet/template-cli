@@ -13,6 +13,11 @@ tasks:
     cmds:
       - task -a
 
+  linters:
+    desc: "Run linters"
+    cmds:
+      - golangci-lint run --config .golangci.yaml ./...
+
   binary:
     desc: "Build binary"
     cmds:
